@@ -15,6 +15,13 @@ body {
     background: #1f252d;
 }
 
+h2 {
+    position: relative;
+    font-size: 14vw;
+    color: #1f252d;
+    -webkit-text-stroke: 0.3vw #383d52;
+}
+
 a {
     position: relative;
     display: inline-block;
