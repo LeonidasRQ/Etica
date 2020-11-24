@@ -137,7 +137,7 @@ function display_intro_instructions() {
     ctx.font = "25px Arial";
     ctx.fillStyle = "red";
     ctx.textAlign = "center";
-    ctx.fillText("Press, touch or click to start", myCanvas.width / 2, myCanvas.height / 4);
+    ctx.fillText("Presione para jugar ", myCanvas.width / 2, myCanvas.height / 4);
 }
 
 function display_game_over() {
@@ -150,7 +150,7 @@ function display_game_over() {
     ctx.fillText("Game Over", myCanvas.width / 2, 100);
     ctx.fillText("Score: " + score, myCanvas.width / 2, 150);
     ctx.font = "20px Arial";
-    ctx.fillText("Click, touch, or press to play again", myCanvas.width / 2, 300);
+    ctx.fillText("Precione, para volver a Jugar", myCanvas.width / 2, 300);
 }
 
 function display_bar_running_along_bottom() {
