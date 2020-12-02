@@ -164,13 +164,9 @@ function display_game_over() {
     ctx.fillText("Game Over", myCanvas.width / 2, 100);
     ctx.fillText("Score: " + score, myCanvas.width / 2, 150);
     ctx.font = "20px Arial";
-    
-    ctx.fillText( tips[aleatorio2] +" " + aleatorio2, myCanvas.width / 2, 300, 300);
 
     ctx.fillText("Presione, para volver a Jugar", myCanvas.width / 2, 400);
     
-    
-
 }
 
 function display_bar_running_along_bottom() {
