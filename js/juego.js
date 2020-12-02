@@ -30,7 +30,21 @@ var game_mode = 'prestart';
 var time_game_last_running;
 var bottom_bar_offset = 0;
 var pipes = [];
+ var aleatorio = Math.random() * 12;
+var aleatorio2= Math.trunc(aleatorio);
 
+var tips= ["La principal causa de reacciones emocionales inapropiadas o agresivas es el estrés acumulado. Así mismo la mejor manera de lidiar con el estrés es con una buena organización de los deberes y el tiempo.",
+            "Herramientas que pueden ayudarte a gestionar tu tiempo son: Google Calendar, Monday, Rescue Time, y Toggl.",
+            "Es importante gestionar tu tiempo y tareas de manera que puedas dormir al menos 6 o 7 horas diarias.",
+        "¡No basta con saber cuando debes hacer las cosas, también es importante saber que es lo que harás!",
+        "Divide tus trabajos en actividades pequeñas y traza metas diarias para realizar pequeños esfuerzos cada día que te encaminen a cumplir tu objetivo.",
+        "Algunas herramientas que pueden ayudarte a gestionar tus tareas son: Trello y Monday.",
+        "Mantén un espacio de trabajo limpio, libre de distracciones y bien iluminado",
+        "Puedes usar algunas apps para aumentar tu productividad y disminuir distracciones durante horas de trabajo como: Freedom, Serene, o Cold Turkey Blocker.",
+        "¡Realiza pausas activas luego de terminar cada clase! Ponte de pie y realiza breves ejercicios de estiramiento.",
+        "Es importante, sobre todo en la modalidad remota, aprender a dividir las horas laborales del tiempo de descanso.",
+        "Dedicarte a actividades físicas durante el día y usar toda tu energía ayuda a que tengas sueño de mejor calidad.",
+    ];
 
 function MySprite(img_url) {
     this.x = 0;
@@ -150,7 +164,13 @@ function display_game_over() {
     ctx.fillText("Game Over", myCanvas.width / 2, 100);
     ctx.fillText("Score: " + score, myCanvas.width / 2, 150);
     ctx.font = "20px Arial";
-    ctx.fillText("Precione, para volver a Jugar", myCanvas.width / 2, 300);
+    
+    ctx.fillText( tips[aleatorio2] +" " + aleatorio2, myCanvas.width / 2, 300, 300);
+
+    ctx.fillText("Presione, para volver a Jugar", myCanvas.width / 2, 400);
+    
+    
+
 }
 
 function display_bar_running_along_bottom() {
@@ -163,6 +183,9 @@ function reset_game() {
     bird.angle = 0;
     pipes = []; // erase all the pipes from the array
     add_all_my_pipes(); // and load them back in their starting positions 
+    aleatorio = Math.random() * 12;
+    aleatorio2= Math.trunc(aleatorio);
+    confirm(tips[aleatorio2])
 }
 
 function add_all_my_pipes() {
